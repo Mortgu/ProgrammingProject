@@ -12,6 +12,7 @@ void create_window(GtkApplication *gtkApplication, Window *window) {
 
     gtk_window_set_title(GTK_WINDOW(gtkWindow), window->title);
     gtk_window_set_default_size(GTK_WINDOW(gtkWindow), window->width, window->height);
+    gtk_window_set_resizable(GTK_WINDOW(gtkWindow), false);
 
     gtk_window_present(GTK_WINDOW(gtkWindow));
 }
