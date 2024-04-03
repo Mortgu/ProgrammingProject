@@ -8,14 +8,9 @@ int main(int argc, char* argv[]) {
     window.application = gtk_application_new("de.pp.image", G_APPLICATION_DEFAULT_FLAGS);
     window.width = 1080;
     window.height = 620;
+    window.title = "HDR Image Viewer";
 
-    if (argc <= 1) {
-        window.title = "HDR Image Viewer";
-        initialize_window(&window, argc, &argv);
-    } else {
-        window.title = argv[1];
-        initialize_window(&window, argc, &argv);
-    }
+    initialize_application(&window, argc, argv);
 
     return 0;
 }

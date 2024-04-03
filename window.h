@@ -10,7 +10,7 @@ typedef struct {
     int height;
 } Window;
 
-void create_window(GtkApplication *gtkApplication, Window *window);
-void initialize_window(Window *window, int argc, char* argv[]);
+//void render_default_content(GtkApplication *gtkApplication, Window *window);
+void initialize_application(Window *window, int argc, char* argv[]);
 
 #endif
