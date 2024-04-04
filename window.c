@@ -5,9 +5,7 @@ static void print_hello(GtkWidget *widget, gpointer data) {
     g_print("Hello World\n");
 }
 
-void render_widget(GtkWidget *widget) {
-
-}
+void render_widget(GtkWidget *widget) { }
 
 /**
  * This function generates the actual window and sets its attributes!
@@ -39,7 +37,7 @@ void initialize_window(GtkApplication *gtkApplication, Window *window) {
     /** WINDOW CONFIGURATION **/
     gtk_window_set_title(GTK_WINDOW(gtkWindow), window->title);
     gtk_window_set_default_size(GTK_WINDOW(gtkWindow), window->width, window->height);
-    gtk_window_set_resizable(GTK_WINDOW(gtkWindow), false);
+    //gtk_window_set_resizable(GTK_WINDOW(gtkWindow), false);
 
     GtkWidget** widgets = render_default_content();
 

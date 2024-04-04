@@ -12,7 +12,5 @@ int main(int argc, char* argv[]) {
 
     initialize_application(&window, argc, argv);
 
-    printf("test");
-
     return 0;
 }
