@@ -30,6 +30,7 @@ GtkWidget** render_default_content() {
     gtk_box_append(GTK_BOX (box), button);
     gtk_box_append(GTK_BOX (box), label);
     gtk_box_append(GTK_BOX (box), label2);
+
 }
 
 void initialize_window(GtkApplication *gtkApplication, Window *window) {
