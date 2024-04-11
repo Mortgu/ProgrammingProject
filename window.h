@@ -11,6 +11,6 @@ typedef struct {
 } Window;
 
 //void render_default_content(GtkApplication *gtkApplication, Window *window);
-void initialize_application(Window *window, int argc, char* argv[]);
+int initialize_application(Window *window, int argc, char* argv[]);
 
 #endif

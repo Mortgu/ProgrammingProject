@@ -25,10 +25,9 @@ GtkWidget** render_default_content() {
 
     g_signal_connect (button, "clicked", G_CALLBACK(print_hello), NULL);
 
-    gtk_box_append(GTK_BOX (box), button);
-    gtk_box_append(GTK_BOX (box), label);
-    gtk_box_append(GTK_BOX (box), label2);
-
+    //gtk_box_append(GTK_BOX (box), button);
+    //gtk_box_append(GTK_BOX (box), label);
+    //gtk_box_append(GTK_BOX (box), label2);
 }
 
 void initialize_window(GtkApplication *gtkApplication, Window *window) {
@@ -52,10 +51,11 @@ void initialize_window(GtkApplication *gtkApplication, Window *window) {
  * @param argc
  * @param argv
  */
-void initialize_application(Window *window, int argc, char *argv[]) {
+int initialize_application(Window *window, int argc, char *argv[]) {
     window->application = gtk_application_new("de.pp.image", G_APPLICATION_DEFAULT_FLAGS);
     g_signal_connect(window->application, "activate", G_CALLBACK(initialize_window), window);
-    g_application_run(G_APPLICATION(window->application), 0, NULL);
+    int status = g_application_run(G_APPLICATION(window->application), argc, argv);
     g_object_unref(window->application);
+    return status;
 }
 
